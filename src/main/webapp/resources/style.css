@@ -1,0 +1,48 @@
+body {
+    padding-top: 40%;
+    text-align: center;
+    background: url("dark.jpg");
+}
+
+title{
+    text-align: center;
+}
+
+p {
+    color: white;
+}
+
+button {
+    color: white;
+
+}
+
+input{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+
+}
+
+.input-group{
+    align-content: center;
+
+}
+
+
+
+
+
+
+
+
+

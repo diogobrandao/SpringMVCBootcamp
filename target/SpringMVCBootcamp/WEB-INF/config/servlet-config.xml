@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- look for spring annotations inside the controller package -->
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="org.academiadecodigo.bootcamp.controller,org.academiadecodigo.bootcamp.api"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="us" class="org.academiadecodigo.bootcamp.service.MockUserService">
+
+        <property name="users">
+
+            <map>
+                <entry key="1">
+                    <bean class="org.academiadecodigo.bootcamp.model.User">
+                        <property name="id" value="1"/>
+                        <property name="username" value="Rodrigo"/>
+                        <property name="password" value="rodrigopass"/>
+                        <property name="email" value="rudydancante@hotmail.com"/>
+                    </bean>
+                </entry>
+
+                <entry key="2">
+                    <bean class="org.academiadecodigo.bootcamp.model.User">
+                        <property name="id" value="2"/>
+                        <property name="username" value="Diogo"/>
+                        <property name="password" value="diogopass"/>
+                        <property name="email" value="diogo@hotmail.com"/>
+                    </bean>
+                </entry>
+
+            </map>
+
+        </property>
+
+
+    </bean>
+
+    <bean id="bs" class="org.academiadecodigo.bootcamp.service.MockBootcampService">
+
+        <property name="bootcamps">
+
+            <map>
+                <entry key="1">
+                    <bean class="org.academiadecodigo.bootcamp.model.Bootcamp">
+                        <property name="id" value="1"/>
+                        <property name="location" value="Lisboa"/>
+                        <property name="end" value="11-11-2017"/>
+                        <property name="start" value="11-11-2018"/>
+                    </bean>
+                </entry>
+
+                <entry key="2">
+                    <bean class="org.academiadecodigo.bootcamp.model.Bootcamp">
+                        <property name="id" value="2"/>
+                        <property name="location" value="Fundão"/>
+                        <property name="start" value="11-11-2017"/>
+                        <property name="end" value="11-11-2018"/>
+                    </bean>
+                </entry>
+
+            </map>
+
+        </property>
+
+
+    </bean>
+
+
+</beans>
