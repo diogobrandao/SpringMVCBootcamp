@@ -14,7 +14,10 @@ import javax.validation.Valid;
 import java.awt.*;
 import java.util.List;
 
+
+
 @RestController
+@CrossOrigin(allowCredentials = "")
 public class RestUserController {
 
     @Autowired
